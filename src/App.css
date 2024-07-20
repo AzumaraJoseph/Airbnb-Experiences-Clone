@@ -5,12 +5,20 @@
   margin-bottom: 20px;
 }
 
+.grey {
+  color: #918e9b;
+}
+
 .hero-img {
-  width: 600px;
+  width: 1000px;
+  align-self: center;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   padding: 8px 40px;
+  margin: 40px 0;
 
 }
 
@@ -22,4 +30,28 @@ main {
 .hero-subtitle {
   margin: 0;
   width: 450px;
+}
+
+.material-icons {
+  color: red;
+}
+
+.card {
+  padding: 0 40px;
+  width: 175px;
+  font-size: 14px;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-stats {
+  display: flex;
+  align-items: center;
+}
+
+.card p {
+  margin: 0;
+  padding: 1px 0;
 }
