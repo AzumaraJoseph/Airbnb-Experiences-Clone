@@ -1,5 +1,4 @@
 import React from "react"
-import AirLogo from '../img/airbnb.png'
 
 export default function NavBar() {
     return (
