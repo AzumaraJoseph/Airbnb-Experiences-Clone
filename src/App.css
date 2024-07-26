@@ -14,10 +14,13 @@
   align-self: center;
 }
 
-main {
+section {
+  padding: 8px 40px;
+}
+
+.main {
   display: flex;
   flex-direction: column;
-  padding: 8px 40px;
   margin: 40px 0;
 
 }
@@ -37,9 +40,11 @@ main {
 }
 
 .card {
-  padding: 0 40px;
-  width: 175px;
+  width: 250px;
   font-size: 14px;
+  padding: 0 20px;
+  flex: 0 0 auto;
+  position: relative;
 }
 
 .card-image {
@@ -54,4 +59,19 @@ main {
 .card p {
   margin: 0;
   padding: 1px 0;
+}
+
+.cards-list {
+  display: flex;
+  overflow-x: scroll;
+  /* width: 50%; */
+}
+
+.card-badge {
+  background-color: white;
+  position: absolute;
+  top: 8px;
+  left: 29px;
+  padding: 4px;
+  border-radius: 5px;
 }

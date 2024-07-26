@@ -2,37 +2,30 @@ import React from "react";
 // import KatieLogo from "../img/katie-zaferes.png"
 
 export default function Card(props) {
+    let badgeText;
+    console.log(props.item);
+    if (props.item.openSpots === 0) {
+        badgeText = 'SOLD OUT'
+    } else if (props.item.location === 'Online') {
+        badgeText = 'Online'
+    } else {
 
-    const nums = [1, 2, 3, 4, 5, 6]
-    const numSquare = nums.map(num => num * num)
-    // console.log(numSquare);
-
-    const names = ['john', 'charles', 'joseph', 'kalu']
-    const capitalized = names.map(name => {
-        return name[0].toUpperCase() + name.slice(1)
-
-    })
-// console.log(capitalized);
-
-const pokesMan = ["Chander", "Justin", "Austin"]
-const poker = pokesMan.map(poke => {
-    return `<p>${poke}</p>`
-})
-//   console.log(poker);
+    }
 
     return (
         <div className="card">
-            <img src={props.img} alt="Katie Logo" className="card-image" />
+            {badgeText &&<div className="card-badge">{badgeText}</div>}
+            <img src={props.item.coverImg} alt="Katie Logo" className="card-image" />
             <div className="card-stats">
                 <span className="material-icons">
                     star
                 </span>
-                <span>{props.rating}</span>
-                <span className="grey">({props.count}) .&nbsp;</span>
-                <span className="grey"> {props.location}</span>
+                <span>{props.item.stats.rating}</span>
+                <span className="grey">({props.item.stats.reviewCount}) .&nbsp;</span>
+                <span className="grey"> {props.item.location}</span>
             </div>
-            <p>{props.title}</p>
-            <p><strong>From ${props.price}</strong> / person</p>
+            <p>{props.item.title}</p>
+            <p><strong>From ${props.item.price}</strong> / person</p>
 
             
         </div>
